@@ -1,0 +1,32 @@
+{
+  "name": "dsh-plugin-minor-mode",
+  "version": "0.1.0",
+  "private": true,
+  "description": "未成年模式：给 DSH 加一个年龄闸门，<18 岁倒计时 5 分钟后触发假蓝屏 / macOS 风格雷霆大锁（仅限 DSH 界面，不影响系统）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md",
+    "README.zh.md"
+  ],
+  "scripts": {
+    "test": "node test/logic.test.mjs && node test/ui.smoke.mjs"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web"
+    }
+  },
+  "license": "MIT"
+}
